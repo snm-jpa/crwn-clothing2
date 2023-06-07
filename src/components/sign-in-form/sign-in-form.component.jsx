@@ -22,24 +22,24 @@ const SignInForm = () => {
     const [formfields, setFormFields] = useState(defaultFormFields);
     const { email, password } = formfields;
 
+    //const { setCurrentUser} = useContext(UserContext);      //setCurrentuser is like setState, may be setContext.
+
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
     }
 
-    //this one is not working. 
     const signInWithGoogle = async (event) => {
-        event.preventDefault();
-        console.log('hello')
-        const { user } = await signInWithGooglePopup();
-        await createUserDocumentFromAuth(user);
+        await signInWithGooglePopup();
+        //await createUserDocumentFromAuth(user);
     }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         try {
-            const response = await signInWithAuthUserWithEmailAndPassword(email, password);
-            console.log(response);
+            const {user} = await signInWithAuthUserWithEmailAndPassword(email, password);
+            console.log(user);
+            setCurrentUser(user);
             resetFormFields();
         } catch (error) {
 
