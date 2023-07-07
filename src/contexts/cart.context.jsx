@@ -86,7 +86,6 @@ export const CartProvider = ({ children }) => {
         setCartItems(clearCartItem(cartItems, cartItemToClear));
     }
 
-
     const value = {
         isCartOpen,
         setIsCartOpen,

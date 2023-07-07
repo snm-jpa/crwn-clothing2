@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FormInput from "../form-input/form-input.component";
-import Button from "../button/button.component";
+import Button, {BUTTON_TYPE_CLASSES}  from "../button/button.component";
 import {
     auth,
     signInWithGooglePopup,
@@ -31,6 +31,7 @@ const SignInForm = () => {
     const signInWithGoogle = async (event) => {
         await signInWithGooglePopup();
         //await createUserDocumentFromAuth(user);
+        console.log('hello')
     }
 
     const handleSubmit = async (event) => {
@@ -92,7 +93,12 @@ const SignInForm = () => {
 
                 <div className="buttons-container">
                     <Button type="submit" >SIGN IN</Button>
-                    <Button type="button" name="google sign in" buttonType={'google'} onClick={signInWithGoogle} >SIGN IN WITH GOOOGLE</Button>
+                    <Button 
+                        buttonType={BUTTON_TYPE_CLASSES.google} 
+                        type='button'
+                        onClick={signInWithGoogle} >
+                            SIGN IN WITH GOOOGLE
+                    </Button>
                 </div>
 
             </form>
