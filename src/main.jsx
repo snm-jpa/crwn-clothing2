@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <UserProvider>
       <CategoriesProvider>
-        <CartProvider>
+        <CartProvider> {/* returns <CartContext.CartProvider  />  */}
           <App />
         </CartProvider>
       </CategoriesProvider>
