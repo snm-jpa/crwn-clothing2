@@ -18,9 +18,6 @@ export const USER_ACTION_TYPES = {
 
 const userReducer = (state, action) => {
 
-    console.log('dispatched');
-    console.log(action);
-
     const { type, payload } = action;
 
     switch (type) {
@@ -50,7 +47,6 @@ export const UserProvider = ({ children }) => {
     const value = { currentUser, setCurrentUser };
 
     useEffect(() => {
-        console.log('useeffect called');
         const unsubscribe = onAuthStateChangedListener((user) => {
             if (user) {
                 createUserDocumentFromAuth(user);

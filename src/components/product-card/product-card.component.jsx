@@ -5,7 +5,18 @@ import Button from '../button/button.component';
 import { CartContext } from '../../contexts/cart.context';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
+/*renders single product*/
 const ProductCard = ({ product }) => {
+
+    /*
+    product = {
+        id: 1,
+        imageUrl: "https://i.ibb.co/ZYW3VTp/brown-brim.png",
+        name: "Brown Brim",
+        price: 25
+    }
+    */
+
     const { name, price, imageUrl } = product;
     const { addItemToCart } = useContext(CartContext);
     const addProductToCart = () => addItemToCart(product);
