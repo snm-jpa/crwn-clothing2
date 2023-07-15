@@ -8,7 +8,7 @@ import {
 // as the actual value you want to access
 //const someContext = createContext(defaultValue)
 export const UserContext = createContext({
-    currentUser: "sonam",
+    currentUser: "",
     setCurrentUser: () => null,
 });
 

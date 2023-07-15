@@ -74,17 +74,12 @@ export const getCategoriesAndDocuments = async () => {
 }
 
 export const createUserDocumentFromAuth = async (userAuth, additionalInformation = {}) => {
-  console.log(userAuth);
+  //console.log(userAuth);
 
   if (!userAuth) return;
 
   const userDocRef = doc(db, 'users', userAuth.uid);
-
-  console.log(userDocRef);
-
   const userSnapshot = await getDoc(userDocRef);
-  console.log(userSnapshot);
-  console.log(userSnapshot.exists());
 
   //if user data does not exisits
   //create/set the document with the data from userAuth in my collection
