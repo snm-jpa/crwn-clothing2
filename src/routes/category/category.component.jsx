@@ -9,10 +9,16 @@ import { selectCategoriesMap } from '../../store/categories/category.selector';
 const Category = () => {
     const { category } = useParams();
     //const { categoriesMap } = useContext(CategoriesContext);
-    const categoriesMap = useSelector(selectCategoriesMap);     //useSelector gets the state from the redux store
+
+    //useSelector gets the state from the redux store
+    const categoriesMap = useSelector(selectCategoriesMap);     
+
     const [products, setProducts] = useState(categoriesMap[category]);
 
+    console.log('render/re-rendering category componenet');
+
     useEffect(() => {
+        console.log('effect fired calling setProduct');
         setProducts(categoriesMap[category]);
     }, [category, categoriesMap]);
 

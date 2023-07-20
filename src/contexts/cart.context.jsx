@@ -82,7 +82,7 @@ const cartReducer = (state, action) => {
 
 export const CartProvider = ({ children }) => {
 
-    console.log('CartProvider component rendered');
+    //console.log('CartProvider component rendered');
 
     // const [isCartOpen, setIsCartOpen] = useState(false);
     // const [cartItems, setCartItems] = useState([]);
@@ -91,7 +91,7 @@ export const CartProvider = ({ children }) => {
 
     const [{ cartItems, isCartOpen, cartCount, cartTotal }, dispatch] = useReducer(cartReducer, INITIAL_STATE);
 
-    console.log(cartItems);
+    //console.log(cartItems);
 
     // useEffect(() => {
     //     const newCartCount = cartItems.reduce((total, cartItem) => total + cartItem.quantity, 0);

@@ -11,8 +11,6 @@ const CategoriesPreview = () => {
 
     const categoriesMap = useSelector(selectCategoriesMap);         //undefined here.
 
-    console.log('-----' + categoriesMap);
-
     return (
         <Fragment>
             {Object.keys(categoriesMap).map((title) => {
