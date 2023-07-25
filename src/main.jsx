@@ -22,9 +22,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       {/* <UserProvider> */}
         {/* <CategoriesProvider> */}
-          <CartProvider> {/* returns <CartContext.CartProvider  />  */}
+          {/* <CartProvider>  */}
             <App />
-          </CartProvider>
+          {/* </CartProvider> */}
         {/* </CategoriesProvider> */}
       {/* </UserProvider> */}
     </BrowserRouter>
