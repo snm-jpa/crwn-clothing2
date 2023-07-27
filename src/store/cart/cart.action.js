@@ -21,8 +21,8 @@ const addCardItem = (cartItems, productToAdd) => {
 
 const removeCartItem = (cartItems, cartItemToRemove) => {
 
-    console.log(cartItems);
-    console.log(cartItemToRemove);
+    // console.log(cartItems);
+    // console.log(cartItemToRemove);
 
 
     const existingCartItem = cartItems.find(
