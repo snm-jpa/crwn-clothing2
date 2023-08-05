@@ -8,6 +8,7 @@ import svgr from 'vite-plugin-svgr'
 //   plugins: [react(), svgr()]
 // })
 
+//from https://dev.to/whchi/how-to-use-processenv-in-vite-ho9
 
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
